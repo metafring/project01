@@ -1,11 +1,10 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 @app.route('/')
 def index():
-    name = 'John'  # 예시로 이름을 설정
-    return render_template('index.html', name=name)
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(port=5001, debug=True)
