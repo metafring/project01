@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJECT 01</title>
+	<meta charset='utf-8'/>
+  	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  	<!-- Bootstrap + jQuery -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	  <script src="https://code.jquery.com/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  
+	<style type="text/css">
+		li{
+			list-style: none;
+		}
+
+		.clear{
+			float: none;
+			clear: both;
+		}
+
+		.header{
+			width: 100%;
+			height: 80px;
+		}
+
+		#header{
+			width: 1349px;
+			margin: auto;
+		}
+
+		.logo{
+			width: 349px;
+			height: 80px;
+			line-height: 80px;
+			float: left;
+			text-align: center;
+		}
+
+		.logo p{
+			font-size: 30px;
+		}
+
+		#header ul{
+			width: 1000px;
+			padding: 0;
+			float: left;
+			padding-top: 20px;
+		}
+
+		#header li{
+			width: 249px;
+			height: 40px;
+			line-height: 40px;
+			float: left;
+			margin: 0;
+			text-align: center;
+			border-right: 1px solid #D6D6D6;
+		}
+
+		#header li:last-child{
+			border: none;
+		}
+
+		#header li a{
+			text-decoration: none;
+			font-size: 25px;
+			color: black;
+		}
+
+		.main{
+			width: 100%;
+		}
+
+		#video{
+			display: flex;
+			justify-content: center; 
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div id="header">
+			<div class="logo">
+				<p>PROJECT01</p>
+			</div>
+			<ul>
+				<li><a href="">Introduce</a></li>
+				<li><a href="">Products</a></li>
+				<li><a href="">Community</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="main">
+  <div id="video" style="">
+    <video autoplay muted loop id="myVideo">
+      <source src="{{ url_for('static', filename='main_video.mp4') }}" type="video/mp4" style="z-index: 20;">
+    </video>
+  </div>
+</div>
+</body>
+</html>
