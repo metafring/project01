@@ -1,0 +1,9 @@
+<div id="footer">
+	<!-- <p>안녕하세요. {{ user_name }}님</p> -->
+    <a href="/join/">join</a>
+    {% if session.logged_in %}
+        <a href="/logout/">logout</a>
+    {% else %}
+        <a href="/login/">login</a>
+    {% endif %}
+</div>
